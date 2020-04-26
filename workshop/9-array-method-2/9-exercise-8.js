@@ -11,15 +11,17 @@
 // Q8
 // Returns true if every element of lst is of length at least 5.
 // Otherwise returns false.
-function allLong(lst) {
-  // lst is an array of strings
-}
 
-console.log('Q8 - case 1', allLong(['Scott', 'Bob', 'Ric', 'Jim']));
-// Should be false
+let allLong1 = ["Scott", "Bob", "Ric", "Jim"];
+let allLong2 = ["Cyborg", "Robin", "Batman", "Superman", "Aquaman", "Flash"];
 
-console.log(
-  'Q8 - case 2',
-  allLong(['Cyborg', 'Robin', 'Batman', 'Superman', 'Aquaman', 'Flash'])
-);
-// Should be true
+let selectedLong1 = allLong1.every(function (item) {
+  return item.length >= 5;
+});
+
+let selectedLong2 = allLong2.every(function (item) {
+  return item.length >= 5;
+});
+
+console.log(selectedLong1);
+console.log(selectedLong2);
