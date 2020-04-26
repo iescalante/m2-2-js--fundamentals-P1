@@ -11,9 +11,10 @@
 // Q6
 // Adds "Hello " to every element of greet
 // For example: greet(["bob", "eric"]) returns ["Hello bob", "Hello eric"]
+let greet = ["David", "Billy", "Lisa", "Jennifer"];
 
-function greet(lst) {
-  // lst is an array of strings
-}
+let newGreet = greet.map(function (item) {
+  return "Hello " + item;
+});
 
-console.log('Q6 greet()', greet(['David', 'Billy', 'Lisa', 'Jennifer']));
+console.log(newGreet);
