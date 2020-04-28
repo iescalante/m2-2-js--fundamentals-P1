@@ -10,9 +10,20 @@
 // 3 ** 3 + 7 ** 3 + 1 ** 3
 // = 27   + 343    + 1
 // = 371
-
-let armstrongNumbers = [];
-
+let array = [];
+function armstrongNumbers() {
+  for (a = 0; a < 10; a++) {
+    for (b = 0; b < 10; b++) {
+      for (c = 0; c < 10; c++) {
+        let cubeNumber = Math.pow(a, 3) + Math.pow(b, 3) + Math.pow(c, 3);
+        let sum = a * 100 + b * 10 + c;
+        let arrArmstrongNumbers = [sum];
+        if (cubeNumber == sum) {
+          console.log(arrArmstrongNumbers);
+        }
+      }
+    }
+  }
+}
 // write your loop here...
-
-console.log(armstrongNumbers);
+console.log(armstrongNumbers());
