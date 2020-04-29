@@ -11,12 +11,24 @@
 // every([2,3,12], isEven) returns false
 
 function every(lst, func) {
-  // lst is an array and f is a function
-  // func takes 1 argument and returns a boolean
+  let newLst = [];
+  for (let i = 0; i < lst.length; i++) {
+    newLst.push(func(lst[i]));
+  }
+  return newLst;
 }
+// lst is an array and f is a function
+// func takes one argument and returns a boolean (true or false)
+
+// -------------------------------------------------------------------------
+function keepLong(str) {
+  return str.length > 5;
+}
+// lst is an array and f is a function
+// func takes 1 argument and returns a boolean
 // -------------------------------------------------------------------------
 function isEven(num) {
   return num % 2 === 0;
 }
-console.log('Q9: ', every([2, 42, 540, 8, 64], isEven));
-console.log('Q9: ', every([2, 42, 540, 3, 64], isEven));
+console.log(every([2, 42, 540, 8, 64], isEven));
+console.log(every([2, 42, 540, 3, 64], isEven));
