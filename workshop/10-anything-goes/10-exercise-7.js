@@ -10,14 +10,13 @@
 // Example:
 // function toUpperCase(str) { return str.toUpperCase(); }
 // map(["bob", "susie"], toUpperCase) returns ["BOB", "SUSIE"]
-function map(arr, mapFunc) {
-  const mapArr = [];
-  for (i = 0; i < arr.length; i++) {
-    const result = function mapFunc(i, arr) {
-      mapArr.push(result);
-    };
-    return mapArr;
+
+function map(lst, func) {
+  let newLst = [];
+  for (let i = 0; i < lst.length; i++) {
+    newLst.push(func(lst[i]));
   }
+  return newLst;
 }
 
 function charCount(str) {
@@ -25,17 +24,6 @@ function charCount(str) {
 }
 
 console.log(
-  map(["Cyborg", "Robin", "Batman", "Superman", "Aquaman", "Flash"]),
-  charCount
+  map(["Cyborg", "Robin", "Batman", "Superman", "Aquaman", "Flash"], charCount)
 );
-console.log(map(["Scott", "Bob", "Ric", "Jim"]), charCount);
-
-/*map takes an array and function as argumentfunction
- map(arr, mapFunc) {    
-   const mapArr = [];       
-  for(let i=0;i<arr.length;i++) {        
-    const result = mapFunc(arr[i], i, arr);        
-    mapArr.push(result);    
-  }    
-  return mapArr;
-}   /*loop though array*/
+console.log(map(["Scott", "Bob", "Ric", "Jim"], charCount));
