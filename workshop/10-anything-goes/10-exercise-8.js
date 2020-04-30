@@ -16,7 +16,9 @@
 function filter(lst, func) {
   let newLst = [];
   for (let i = 0; i < lst.length; i++) {
-    newLst.push(func(lst[i]));
+    if (func(lst[i])) {
+      newLst.push(lst[i]);
+    }
   }
   return newLst;
 }

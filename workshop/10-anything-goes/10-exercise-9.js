@@ -11,19 +11,19 @@
 // every([2,3,12], isEven) returns false
 
 function every(lst, func) {
-  let newLst = [];
+  let verif = true;
   for (let i = 0; i < lst.length; i++) {
-    newLst.push(func(lst[i]));
+    if (verif) {
+      verif = func(lst[i]);
+    }
   }
-  return newLst;
+  return verif;
 }
 // lst is an array and f is a function
 // func takes one argument and returns a boolean (true or false)
 
 // -------------------------------------------------------------------------
-function keepLong(str) {
-  return str.length > 5;
-}
+
 // lst is an array and f is a function
 // func takes 1 argument and returns a boolean
 // -------------------------------------------------------------------------
