@@ -17,7 +17,7 @@
 // http://mathworld.wolfram.com/NarcissisticNumber.html
 
 function identifyArmstrongNumbers(num1, num2) {
-  /* if (0 <= num1 || num2 < 10) {
+  if (0 <= num1 || num2 < 10) {
     for (a = 0; a < 10; a++) {
       let power1 = Math.pow(a, 1);
       let sum = a;
@@ -69,7 +69,7 @@ function identifyArmstrongNumbers(num1, num2) {
       }
     }
   }
-*/
+
   if ((num1, num2 <= 99999)) {
     for (a = 0; a < 10; a++) {
       for (b = 0; b < 10; b++) {
