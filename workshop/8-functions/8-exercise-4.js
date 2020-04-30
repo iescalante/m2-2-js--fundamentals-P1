@@ -18,10 +18,5 @@ const myArray = [
   "funky",
 ];
 
-<<<<<<< HEAD
 console.log(itemIsPresent(myArray, "funky"));
 console.log(itemIsPresent(myArray, "elephant"));
-=======
-console.log(itemIsPresent(myArray, 'funky')); // true
-console.log(itemIsPresent(myArray, 'elephant')); // false
->>>>>>> solution/master
